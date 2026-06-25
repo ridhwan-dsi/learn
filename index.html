@@ -1701,6 +1701,10 @@ body {
 .dd-col.dont .dd-icon{color:var(--red);}
 .dd-col .dd-sub{color:var(--muted);font-size:12px;font-weight:400;}
 
+
+/* LAYOUT FIX: subpage content area must not be 100% wide on top of the 248px sidebar margin (that caused right-edge overflow/clipping and a big left gap). width:auto lets the margin reduce the width so the centred reading column gets equal gutters at every screen size. */
+.app-page .main{width:auto !important;max-width:none !important;}
+.app-page .main .content-body,.app-page .main .chapter-header,.app-page .main .hero-content,.app-page .main .qr-section>h2,.app-page .main .qr-section>.subtitle,.app-page .main .qr-grid,.app-page .main .qr-footer-line{margin-left:auto !important;margin-right:auto !important;}
 </style>
 </head>
 <body>
